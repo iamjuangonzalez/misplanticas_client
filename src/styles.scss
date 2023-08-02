@@ -1,1 +1,75 @@
 /* You can add global styles to this file, and also import other style files */
+@mixin mobile {
+  @media only screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+/* Default CSS */
+html {
+  box-sizing: border-box;
+  color: #222;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: #ffffff;
+  position: relative;
+  font-size: 18px;
+  font-family: Mulish, sans-serif;
+  overflow-x: hidden;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+.btn__primary {
+  padding: 16px;
+  background: #91cb85;
+  color: #ffffff;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+.btn__secondary {
+  padding: 16px;
+  background: #fff;
+  color: #222222;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.cp {
+  cursor: pointer;
+}
+
+.btn__form {
+  width: 100%;
+  padding: 20px 50px;
+  outline: none;
+  background: #f8f8f8;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #222;
+}

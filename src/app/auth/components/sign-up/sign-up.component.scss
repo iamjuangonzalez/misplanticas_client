@@ -1,0 +1,84 @@
+@import "./../../../../styles.scss";
+
+#register {
+  .card-register {
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 350px;
+
+    @include mobile {
+      padding: 20px;
+    }
+
+    .card-text-info {
+      margin-top: 10px;
+
+      @include mobile {
+        margin-top: 20px;
+      }
+
+      .text-register-bold {
+        color: #222;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 1;
+      }
+      .login__title_sec {
+        font-size: 14px;
+        color: #979797;
+      }
+    }
+    .card-form {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .form__button {
+        position: relative;
+        margin-top: 10px;
+        .form__img {
+          position: absolute;
+          left: 13px;
+          /* width: 23px; */
+          top: 20px;
+        }
+      }
+      .form__termins {
+        margin-top: 12px;
+        .form__title_termins {
+          color: #707487;
+          font-size: 14px;
+        }
+      }
+      .form__button_login {
+        margin-top: 12px;
+        background: #91cb85;
+        border-radius: 6px;
+        border: none;
+        outline: none;
+        font-size: 20px;
+        line-height: 1;
+        color: #fff;
+        padding: 10px 0;
+      }
+    }
+    .card-member {
+      text-align: center;
+      .text-info-member {
+        font-size: 12px;
+        line-height: 1;
+        color: #455a64;
+      }
+      .text-register {
+        font-size: 12px;
+        line-height: 1;
+        color: #455a64;
+      }
+    }
+  }
+}
+
+input::placeholder {
+  color: #222;
+}

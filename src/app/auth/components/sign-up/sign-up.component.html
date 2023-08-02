@@ -1,0 +1,46 @@
+<div id="register">
+    <div class="card-register">
+        <div class="card-text-info">
+            <span class="text-register-bold">Registra tu cuenta</span> <br>
+            <span class="login__title_sec">Ingrese sus datos para una nueva cuenta</span>
+        </div>
+        <form [formGroup]="createUserForm" class="card-form">
+            <div class="form__button">
+                <input class="btn__form" type="text" formControlName="password" placeholder="Nombres completos" />
+                <img class="form__img" src="./../../../../assets/icons/user.svg" alt="Nombres del usuario">
+            </div>
+            <div class="form__button">
+                <input class="btn__form" type="email" formControlName="password" placeholder="Correo electronico" />
+                <img class="form__img" src="./../../../../assets/icons/mail.svg" alt="Correo electronico">
+            </div>
+            <div class="form__button">
+                <input class="btn__form" type="tel" formControlName="password" placeholder="Teléfono" />
+                <img class="form__img" src="./../../../../assets/icons/phone.svg" alt="Teléfono del usuario">
+            </div>
+            <div class="form__button">
+                <input class="btn__form" type="password" formControlName="password" placeholder="Contraseña" />
+                <img class="form__img" src="./../../../../assets/icons/password.svg" alt="Password">
+            </div>
+            <div class="form__termins">
+                <input type="checkbox">
+                <span class="form__title_termins">Al hacer click estará aceptando los terminos y condiciones del uso de
+                    la
+                    plataforma
+                </span>
+            </div>
+            <button class="form__button_login cp" type="button"
+                [disabled]="loading && createUserForm.invalid && !validUsername" (click)="registerUser()">
+                <div *ngIf="loading" class="loading-sniper"></div>
+                <div *ngIf="!loading">Registrarme</div>
+            </button>
+        </form>
+        <div class="card-member">
+            <span class="text-info-member">Ya eres miembro?&nbsp;</span>
+            <span class="text-register cp" routerLink="/auth/singIn">Inicia sesión</span>
+        </div>
+    </div>
+</div>
+
+<div class="warning" [class.visible]="isWarning">
+    {{titleWarning}}
+</div>

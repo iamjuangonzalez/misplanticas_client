@@ -1,0 +1,40 @@
+<div id="login">
+    <div class="login__card-login">
+        <div class="card-text-info">
+            <span class="login__title_pri">Bienvenido de nuevo!</span> <br>
+            <span class="login__title_sec">Ingrese a su cuenta de misplanticas</span>
+        </div>
+        <form [formGroup]="loginForm" class="card-form">
+            <div class="card-email-form">
+                <input class="btn__form" formControlName="email" type="email" required
+                    placeholder="Correo electronico" />
+                <img class="img-input-email" src="./../../../../assets/icons/mail.svg" alt="Email">
+            </div>
+            <div class="card-password-form">
+                <input class="btn__form" formControlName="password" type="password" placeholder="Contraseña" />
+                <img class="img-input-password" src="./../../../../assets/icons/password.svg" alt="Password">
+            </div>
+            <button type="submit" [disabled]="loading" class="btn__primary btn__primary--home cp" (click)="login()"
+                [disabled]="loginForm.invalid">
+                <div *ngIf="loading" class="loading-sniper"></div>
+                <div *ngIf="!loading">Iniciar sesión</div>
+            </button>
+        </form>
+        <div class="card-member">
+            <span class="text-info-member cp" routerLink="/auth/recovery">Recuperar contraseña?&nbsp;</span>
+        </div>
+        <div class="card-member">
+            <span class="text-info-member">¿No tienes una cuenta? &nbsp;</span>
+            <span class="text-register cp" routerLink="/auth/register">Crear cuenta</span>
+        </div>
+    </div>
+</div>
+<div class="alert" [class.visible]="isError">
+    {{titleError}}
+</div>
+<div class="success" [class.visible]="isSuccess">
+    {{titleSuccess}}
+</div>
+<div class="warning" [class.visible]="isWarning">
+    {{titleWarning}}
+</div>

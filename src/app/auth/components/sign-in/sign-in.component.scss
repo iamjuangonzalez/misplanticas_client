@@ -1,0 +1,77 @@
+@import "./../../../../styles.scss";
+
+#login {
+  /* padding: 30px; */
+  .login__card-login {
+    border-radius: 10px;
+    width: 100%;
+    /* max-width: 350px; */
+
+    /* @include mobile {
+      padding: 40px;
+    } */
+
+    .card-text-info {
+      text-align: start;
+      @include mobile {
+        margin-top: 20px;
+      }
+      .login__title_pri {
+        font-size: 24px;
+        font-weight: 600;
+        color: #222;
+      }
+      .login__title_sec {
+        font-size: 14px;
+        color: #979797;
+      }
+    }
+    .card-form {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .card-email-form {
+        position: relative;
+        margin-top: 10px;
+        .img-input-email {
+          position: absolute;
+          left: 13px;
+          width: 25px;
+          top: 18px;
+        }
+      }
+      .card-password-form {
+        position: relative;
+        margin-top: 10px;
+        .img-input-password {
+          position: absolute;
+          left: 13px;
+          width: 24px;
+          top: 18px;
+        }
+      }
+      .btn__primary--home {
+        margin-top: 24px;
+      }
+    }
+    .card-member {
+      text-align: center;
+      .text-info-member {
+        font-size: 12px;
+        line-height: 1;
+        color: #455a64;
+      }
+      .text-register {
+        font-size: 12px;
+        line-height: 1;
+        color: #455a64;
+      }
+    }
+  }
+}
+
+input::placeholder {
+  color: #222;
+}

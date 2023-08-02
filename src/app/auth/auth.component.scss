@@ -1,0 +1,17 @@
+@import "./../../styles.scss";
+
+#auth__layout {
+  min-height: 100vh;
+  min-width: 100vw;
+  position: relative;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  .auth__router {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+  }
+}
